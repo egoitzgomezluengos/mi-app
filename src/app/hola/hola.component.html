@@ -1,0 +1,13 @@
+<h2 [ngClass]="claseTitulo">Titulo</h2>
+
+<button (click)="cambiarEstilo()">cambiar estilo titulo</button>
+
+<p>hola {{nombre}}</p>
+
+<p>{{fechaNac | date}}</p>
+
+<div *ngIf="mostrar">Mostramos</div>
+
+<button (click)="mostrar = !mostrar">mostrar/ocultar</button>
+
+<div class="{{mostrar ? 'seleccionado': ''}}">Importante o no</div>
