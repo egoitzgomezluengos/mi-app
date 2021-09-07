@@ -11,3 +11,14 @@
 <button (click)="mostrar = !mostrar">mostrar/ocultar</button>
 
 <div class="{{mostrar ? 'seleccionado': ''}}">Importante o no</div>
+
+<div>{{ numero | number:'7.1-5':'en' }}</div> 
+
+{{'Pruebo pipe' | tituloHtml:'blue'}}
+<hr/>
+<button id="b1" [disabled]="mostrar" (click)="mostrar">boton1</button>
+
+<button id="b2" [disabled]="mostrar" (click)="mostrar">boton2</button>
+
+
+Nombre: <input type="text" [(ngModel)]="nombre">

@@ -5,13 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.css']
 })
-export class TimerComponent implements OnInit {
+export class TimerComponent{
+
+  languageCode: string ='es';
+  localizedLabelsMap: any = {
+    'en' : 'Start timer',
+    'es' : 'Comenzar temporizador',
+    'fr' : 'Demarrer une sequence',
+    'other' : 'Start timer' 
+  }
 
   minutes!: number;
   seconds!: number;
   isPaused!: boolean;
   buttonLabel!: string;
-  
+
+
   constructor() {
     this.reset();
     setInterval(() => this.tick(),1000);
@@ -43,7 +52,7 @@ export class TimerComponent implements OnInit {
       }
     }
 
-  ngOnInit(): void {
-  }
-
+    onCountdownCompleted(): void{
+      alert('Time up!')
+    }
 }

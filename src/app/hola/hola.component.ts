@@ -11,6 +11,7 @@ export class HolaComponent implements OnInit {
   fechaNac: Date;
   mostrar: boolean = true;
   claseTitulo: string;
+  numero: number = 3.1411434344;
   constructor() { 
     console.log('iniciando componente HolaComponent');
     this.nombre = 'Egoitz';
